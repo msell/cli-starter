@@ -6,7 +6,8 @@
   "scripts": {
     "start": "babel-node ./src/index.js",
     "lint": "eslint ./src",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "compile": "babel -d lib/ src/"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
