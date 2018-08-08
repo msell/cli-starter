@@ -9,7 +9,9 @@
     "lint:fix": "npm run lint -- --fix",
     "compile": "babel -d lib/ src/",
     "package:win": "pkg ./lib/index.js --targets node8-win-x64 --output ./binaries/win/foobar",
-    "package:mac": "pkg ./lib/index.js --targets node8-macos-x64  --output ./binaries/mac/foobar"
+    "package:mac": "pkg ./lib/index.js --targets node8-macos-x64  --output ./binaries/mac/foobar",
+    "prebuild": "npm run compile",
+    "build": "npm run package:win && npm run package:mac"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
